@@ -1,0 +1,10 @@
+// @file
+// Styles for a rate link.
+
+.rate-link {
+  background: transparent;
+  color: $primary-text-color;
+  display: block;
+  font-size: em(28px);
+  margin-top: -2em;
+}

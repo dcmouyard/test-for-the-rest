@@ -1,0 +1,19 @@
+// @file
+// Styles for a notes link.
+
+.notes-link {
+  background: transparent;
+  bottom: em(24px, 20px);
+  display: none;
+  font-size: em(30px);
+  line-height: 1;
+  position: absolute;
+  left: em(24px, 20px);
+  text-shadow: none;
+  z-index: 100;
+
+  .impress-on-title &,
+  .impress-on-final & {
+    display: block;
+  }
+}

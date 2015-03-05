@@ -1,0 +1,20 @@
+// @file
+// Underline
+
+@mixin underline($color: $link-underline-color, $weight: $link-underline-width, $offset: $link-underline-offset) {
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 or $legacy-support-for-ie8 {
+
+  }
+  @else {
+    @include background-image(
+      linear-gradient(
+        bottom,
+        transparent,
+        transparent $offset,
+        $color $offset,
+        $color ($offset + $weight),
+        transparent ($offset + $weight)
+      )
+    );
+  }
+}

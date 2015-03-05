@@ -1,0 +1,107 @@
+// @file
+// Slides
+
+// Show/hide other slides based on which slide is active.
+@each $slide in title, dcmouyard, disabilities, test-results, test-results-data, test-results-understand, test-results-equal, severity, severity-impact, severity-high, severity-medium, severity-low, effort, effort-easy, effort-quick, effort-more, location, location-impact, location-traffic, types, types-automated, types-manual, types-use-case, types-usability, automated, automated-automatically, automated-reliability, tools, tools-quality, tools-confuser, tools-list, tools-list-more, tools-verify, manual, manual-time, manual-list, manual-skill, use-case, use-case-test, use-case-level, use-case-accuracy, use-case-caution, use-case-code, use-case, use-case-test, use-case-level, use-case-accuracy,  hide-on-use-case-caution, use-case-code, usability, usability-people, usability-findings, when, when-late, when-expensive, when-risk, incorporate, waterfall, waterfall-phases, agile, agile-ac, agile-dev, agile-qa, content, content-problems, content-training, content-publish, content-workflow, content-qa, iterative, iterative-goal, iterative-first, iterative-never, iterative-manual, iterative-end, questions, final {
+  .impress-on-#{$slide} .show-on-#{$slide} {
+    opacity: 1;
+  }
+  .impress-on-#{$slide} .hide-on-#{$slide} {
+    opacity: 0;
+  }
+}
+
+%bg-primary {
+  background: url(../img/branding/f1-wordmark-white.svg) no-repeat calc(100% - 24px) calc(100% - 18px),
+              $f1-red url(../img/branding/f1-thin-circle-white.svg) no-repeat -1150px 50px;
+  background-size: 144px 16px, 1800px 1800px;
+
+  a {
+    color: $f1-white;
+  }
+}
+
+%bg-secondary {
+  background: url(../img/branding/f1-wordmark-white.svg) no-repeat calc(100% - 24px) calc(100% - 18px),
+              $f1-ash url(../img/branding/f1-thin-circle-red.svg) no-repeat -1150px 50px;
+  background-size: 144px 16px, 1800px 1800px;
+}
+
+// Secondary heading slides.
+@each $slide in why, disabilities, test-results, types, when {
+  .impress-on-#{$slide}  {
+    @extend %bg-secondary;
+  }
+
+  ##{$slide} {
+    text-shadow: darken($f1-ash, 20%) 2px 2px;
+
+    .title {
+      margin: 0;
+    }
+  }
+}
+
+.impress-on-title {
+  @extend %bg-primary;
+}
+
+#title {
+  text-shadow: none;
+
+  h1 {
+    margin: 0;
+  }
+
+  small {
+    display: block;
+    margin-top: em(32px, 45px);
+    text-transform: none;
+  }
+}
+
+#dcmouyard {
+  h3 {
+    margin-bottom: 0.5em;
+  }
+
+  img {
+    background: #000;
+  }
+}
+
+.impress-on-personal-story {
+  @extend %picture-background;
+  background-image: url(../img/dj.jpg);
+}
+
+.impress-on-why-legal {
+  @extend %picture-background;
+  // http://www.flickr.com/photos/jreed/379881530/
+  background-image: url(../img/target.jpg);
+}
+
+.impress-on-why-blind {
+  @extend %picture-background;
+  // http://www.flickr.com/photos/specialkrb/4689672374/
+  background-image: url(../img/blind.jpg);
+}
+
+.impress-on-why-elderly {
+  @extend %picture-background;
+  // http://www.flickr.com/photos/srgblog/3309100541/
+  background-image: url(../img/elderly.jpg);
+}
+
+.impress-on-why-glare {
+  @extend %picture-background;
+  // http://www.flickr.com/photos/chrisdlugosz/3592952033/
+  background-image: url(../img/glare.jpg);
+}
+
+
+.impress-on-all {
+  .step {
+    opacity: 1;
+  }
+}
